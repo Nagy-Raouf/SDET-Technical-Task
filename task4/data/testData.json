@@ -1,0 +1,53 @@
+{
+  "users": {
+    "missingFields": {
+      "userWithNameOnly": {
+        "name": "user123",
+        "email": "",
+        "password": ""
+      },
+      "userWithEmailOnly": {
+        "name": "",
+        "email": "incomplete@example.com",
+        "password": ""
+      },
+      "userWithEPasswordOnly": {
+        "name": "",
+        "email": "",
+        "password": "Pass123!"
+      }
+    },
+    "invalidEmail": {
+      "name": "user123",
+      "email": "invalid-email",
+      "password": "Pass123!"
+    }
+  },
+  "auth": {
+    "wrongPassword": {
+      "email": "will_be_replaced@example.com",
+      "password": "WrongPass123!"
+    },
+    "unregisteredEmail": {
+      "email": "nouser@example.com",
+      "password": "Pass123!"
+    },
+    "missingPassword": {
+      "email": "will_be_replaced@example.com"
+    }
+  },
+  "patch": {
+    "invalidField": {
+      "foobar": "invalid"
+    }
+  },
+  "deleteAllUsers": {
+    "corretAdminKey": {
+      "key_admin": "keyadmin123"
+    },
+    "wrongAdminKey": {
+      "key_admin": "wrongKey"
+    },
+    "emptyAdminKey": {}
+  }
+}

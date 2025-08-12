@@ -1,0 +1,32 @@
+{
+  "name": "task4-api-tests",
+  "version": "1.0.0",
+  "description": "API tests for mock-user-auth using Jest and Supertest",
+  "scripts": {
+    "mock-auth": "nodemon ./node_modules/mock-user-auth/bin/www.js",
+    "test": "jest --runInBand --detectOpenHandles"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-html-reporter": "^3.10.2",
+    "mock-user-auth": "^1.0.15",
+    "supertest": "^7.1.4",
+    "uuid": "^11.1.0"
+  },
+  "jest": {
+    "reporters": [
+      "default",
+      [
+        "./node_modules/jest-html-reporter",
+        {
+          "pageTitle": "Mock User Auth API Test Report",
+          "outputPath": "./reports/test-report.html",
+          "includeFailureMsg": true,
+          "includeConsoleLog": true,
+          "theme": "defaultTheme"
+        }
+      ]
+    ],
+    "testEnvironment": "node"
+  }
+}

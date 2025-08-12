@@ -1,0 +1,19 @@
+{
+  "success": {
+    "loginSuccess": "Authentication successful",
+    "createSuccess": "User registered with success",
+    "updateSuccess": "User updated with success!",
+    "deleteSuccess": "User deleted with success",
+    "deleteAllSuccess": "Users deleted with success"
+  },
+  "errors": {
+    "loginFail": "Invalid email or password",
+    "unauthorized": "Authorization token missing or invalid",
+    "duplicateUser": "User already registered",
+    "invalidEmail": "Email format is invalid",
+    "missingPassword": "Password is required",
+    "missingFields": "Required fields are missing",
+    "notFound": "User not found",
+    "deleteAllError": "Unauthorized access"
+  }
+}
