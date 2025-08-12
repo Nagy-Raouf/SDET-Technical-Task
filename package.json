@@ -1,0 +1,14 @@
+{
+  "name": "sdet-technical-task",
+  "version": "1.0.0",
+  "description": "Combined Siemens SDET technical task automation scripts",
+  "scripts": {
+    "test:task1": "cd task1 && npx nightwatch",
+    "test:task2": "cd task2 && npx nightwatch",
+    "test:task3": "cd task3 && npx nightwatch",
+    "test:all": "npm run test:task1 && npm run test:task2 && npm run test:task3"
+  },
+  "devDependencies": {
+    "nightwatch": "^3.4.0"
+  }
+}
