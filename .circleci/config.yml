@@ -22,8 +22,14 @@ jobs:
             # Run Nightwatch tests, which will pick up the environment variable
             npm run test:all
       - store_artifacts:
-          path: reports
-          destination: ui-reports
+          path: task1/tests_output/nightwatch-html-report
+          destination: task1-report
+      - store_artifacts:
+          path: task2/tests_output/nightwatch-html-report
+          destination: task2-report
+      - store_artifacts:
+          path: task3/tests_output/nightwatch-html-report
+          destination: task3-report
 
 workflows:
   version: 2
