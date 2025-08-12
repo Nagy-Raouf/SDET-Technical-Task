@@ -4,7 +4,7 @@ orbs:
   node: circleci/node@5.0.1
 
 jobs:
-  run-task1:
+  run-all-tests:
     docker:
       - image: cimg/node:18.16
     steps:
@@ -12,39 +12,11 @@ jobs:
       - node/install-packages:
           pkg-manager: npm
       - run:
-          name: Run Task 1 Tests
-          command: cd task1 && npx nightwatch
-
-  run-task2:
-    docker:
-      - image: cimg/node:18.16
-    steps:
-      - checkout
-      - node/install-packages:
-          pkg-manager: npm
-      - run:
-          name: Run Task 2 Tests
-          command: cd task2 && npx nightwatch
-
-  run-task3:
-    docker:
-      - image: cimg/node:18.16
-    steps:
-      - checkout
-      - node/install-packages:
-          pkg-manager: npm
-      - run:
-          name: Run Task 3 Tests
-          command: cd task3 && npx nightwatch
+          name: Run All Tasks
+          command: npm run test:all
 
 workflows:
   version: 2
   test-workflow:
     jobs:
-      - run-task1
-      - run-task2:
-          requires:
-            - run-task1
-      - run-task3:
-          requires:
-            - run-task2
+      - run-all-tests
