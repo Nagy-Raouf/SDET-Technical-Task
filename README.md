@@ -34,32 +34,35 @@ The CI/CD pipeline runs tests for each task sequentially using [CircleCI](https:
 
 ## 🚀 Running Tests Locally
 
-### Task 1
+### Running All Tests
 
-```bash
-cd task1
-npm install
-npm install --save-dev
-npx nightwatch
-```
+1.  **Clone the repository** to your local machine:
+    ```bash
+    git clone https://github.com/Nagy-Raouf/SDET-Technical-Task.git
+    cd SDET-Technical-Task
+    ```
+2.  **Install the npm packages** specified in `package.json`:
+    ```bash
+    npm install
+    npm install --save-dev
+    ```
+3.  **Use the following scripts**
 
-### Task 2
+    ##### Running All Tasks
 
-```bash
-cd task2
-npm install
-npm install --save-dev
-npx nightwatch
-```
+        npm run test:all
 
-### Task 3
+    ##### Task 1
 
-```bash
-cd task3
-npm install
-npm install --save-dev
-npx nightwatch
-```
+        npm run test:task1
+
+    ##### Task 2
+
+        npm run test:task2
+
+    ##### Task 3
+
+        npm run test:task3
 
 ## 🔄 Continuous Integration (CI/CD)
 
