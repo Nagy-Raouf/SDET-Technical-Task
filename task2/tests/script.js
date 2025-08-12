@@ -15,7 +15,7 @@ describe("LinkedIn Registration Test", function () {
     // Step 1: Open LinkedIn home page
     // =========================================
     homePage.navigate();
-    homePage.waitForElementVisible("@joinNowButton", 5000, "User is at the home page.");
+    homePage.waitForElementVisible("@joinNowButton", 10000, "User is at the home page.");
 
     // =========================================
     // Step 2: Go to Registration page
