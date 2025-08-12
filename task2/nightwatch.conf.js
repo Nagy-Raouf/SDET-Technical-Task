@@ -10,7 +10,6 @@
 // \_| \_/|_| \__, ||_| |_| \__|  \_/\_/   \__,_| \__| \___||_| |_|
 //             __/ |
 //            |___/
-const CHROME_USER_DATA_DIR = process.env.CHROME_USER_DATA_DIR || "/tmp/nightwatch-default-profile";
 
 module.exports = {
   // An array of folders (excluding subfolders) where your tests are located;
@@ -51,7 +50,6 @@ module.exports = {
             "--log-level=3", // 0 = verbose, 3 = fatal
             "--silent", // Additional silence
             "--disable-dev-shm-usage",
-            `--user-data-dir=${CHROME_USER_DATA_DIR}`,
             "--no-sandbox",
           ],
           excludeSwitches: ["enable-logging"], // Remove extra logging switch
