@@ -17,6 +17,7 @@ module.exports = {
     homePage.waitForElementVisible("@homeIdentifier", 5000, "The home page loaded successfully.");
 
     // Assert that the URL contains the expected part for the home page.
+    // Neglect the protocol during checking - Fix pipeline issue
     const expectedWithoutProtocol = homePage.url.replace(/^https?:\/\//, "");
     homePage.assert.urlContains(expectedWithoutProtocol, "User is at the home page.");
 

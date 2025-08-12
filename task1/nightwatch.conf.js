@@ -10,6 +10,8 @@
 // \_| \_/|_| \__, ||_| |_| \__|  \_/\_/   \__,_| \__| \___||_| |_|
 //             __/ |
 //            |___/
+const os = require("os");
+const path = require("path");
 
 module.exports = {
   // An array of folders (excluding subfolders) where your tests are located;
@@ -50,7 +52,7 @@ module.exports = {
             "--no-sandbox",
             "--disable-dev-shm-usage",
             "--disable-gpu",
-            `--user-data-dir=/tmp/chrome-profile-${Date.now()}`,
+            `--user-data-dir=${path.join(os.tmpdir(), `chrome-profile-${Date.now()}`)}`,
           ],
         },
       },
