@@ -9,6 +9,7 @@ jobs:
       - image: cimg/node:18.16
     steps:
       - checkout
+      - browser-tools/install-chrome
       - node/install-packages:
           pkg-manager: npm
       - run:
