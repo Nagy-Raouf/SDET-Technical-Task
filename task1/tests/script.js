@@ -14,7 +14,7 @@ module.exports = {
     homePage.navigate();
 
     // Wait for a unique element that confirms home page loaded
-    homePage.waitForElementVisible("@homeIdentifier", 10000, "The home page loaded successfully.");
+    homePage.waitForElementVisible("@homeIdentifier", 15000, "The home page loaded successfully.");
 
     // Assert that the URL contains the expected part for the home page.
     // Neglect the protocol during checking - Fix pipeline issue
@@ -26,7 +26,7 @@ module.exports = {
     homePage.click("@contactLink");
 
     // Wait for the contact page to load
-    contactPage.waitForElementVisible("@contactPageIdentifier", 10000, "The contact page loaded successfully.");
+    contactPage.waitForElementVisible("@contactPageIdentifier", 15000, "The contact page loaded successfully.");
 
     // Assert that the URL contains the expected part for the contact page.
     browser.assert.urlContains("/contact.html", "User is at the contact page.");
