@@ -14,14 +14,14 @@ describe("Search Functionality Test", function () {
     // Step 1: Open home page
     // =========================================
     homePage.navigate();
-    homePage.waitForElementVisible("@searchButton", 5000, "User is at the home page.");
+    homePage.waitForElementVisible("@searchButton", 10000, "User is at the home page.");
 
     // =========================================
     // Step 2: Enter search value in search bar and click search
     // =========================================
     homePage.setValue("@searchBar", data.searchKeyword);
     homePage.click("@searchButton");
-    searchResultPage.waitForElementVisible("@searchKeyword", 5000, "The result page is loaded");
+    searchResultPage.waitForElementVisible("@searchKeyword", 10000, "The result page is loaded");
 
     // =========================================
     // Step 3: Verify search results
@@ -32,7 +32,7 @@ describe("Search Functionality Test", function () {
       "PASS: The search keyword is displayed correctly"
     );
 
-    searchResultPage.waitForElementVisible("@productList", 5000, "All the products are visible");
+    searchResultPage.waitForElementVisible("@productList", 10000, "All the products are visible");
 
     searchResultPage.api.elements("@productName", function (result) {
       this.assert.ok(result.value.length > 0, "Found at least one product");

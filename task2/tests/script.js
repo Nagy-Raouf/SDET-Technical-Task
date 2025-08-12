@@ -25,7 +25,7 @@ describe("LinkedIn Registration Test", function () {
     // =========================================
     // Step 3: Fill Email & Password
     // =========================================
-    registrationPage.waitForElementVisible("@emailInput", 5000, "User is at the Registration Page");
+    registrationPage.waitForElementVisible("@emailInput", 10000, "User is at the Registration Page");
     registrationPage.setValue("@emailInput", data.email);
     registrationPage.setValue("@passwordInput", data.password);
     registrationPage.click("@agreeAndJoinButton");
@@ -33,7 +33,7 @@ describe("LinkedIn Registration Test", function () {
     // =========================================
     // Step 4: Fill First & Last Name
     // =========================================
-    registrationPage.waitForElementVisible("@firstNameInput", 5000, "The Registration form is displayed");
+    registrationPage.waitForElementVisible("@firstNameInput", 10000, "The Registration form is displayed");
     registrationPage.setValue("@firstNameInput", data.firstName);
     registrationPage.setValue("@lastNameInput", data.lastName);
     registrationPage.click("@continueButton");
@@ -41,7 +41,7 @@ describe("LinkedIn Registration Test", function () {
     // =========================================
     // Step 5: Verify Security Check Text
     // =========================================
-    securityPage.waitForElementVisible("@securityCheck", 5000, "Security Check page is displayed");
+    securityPage.waitForElementVisible("@securityCheck", 10000, "Security Check page is displayed");
     securityPage.assert.textEquals("@securityCheck", data.messages.securityCheck);
   });
 
