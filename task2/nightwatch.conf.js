@@ -51,6 +51,9 @@ module.exports = {
             "--silent", // Additional silence
             "--disable-dev-shm-usage",
             "--no-sandbox",
+            "--headless",
+            "--disable-gpu",
+            `--user-data-dir=/tmp/chrome-profile-${Date.now()}`,
           ],
           excludeSwitches: ["enable-logging"], // Remove extra logging switch
         },

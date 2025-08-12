@@ -44,6 +44,15 @@ module.exports = {
 
       desiredCapabilities: {
         browserName: "chrome",
+        "goog:chromeOptions": {
+          args: [
+            "--headless",
+            "--no-sandbox",
+            "--disable-dev-shm-usage",
+            "--disable-gpu",
+            `--user-data-dir=/tmp/chrome-profile-${Date.now()}`,
+          ],
+        },
       },
 
       webdriver: {
