@@ -33,6 +33,9 @@ module.exports = {
 
   test_settings: {
     default: {
+      globals: {
+        waitForConditionTimeout: 15000, // 15 seconds instead of default 5s
+      },
       disable_error_log: false,
       launch_url: "http://automationpractice.multiformis.com/index.php",
 
