@@ -1,0 +1,27 @@
+# Node.js dependencies
+task1/node_modules/
+task2/node_modules/
+task3/node_modules/
+
+# Environment variables
+.env
+
+# Test output and artifacts
+task1/reports/
+task1/screenshots/
+task1/tests_output/
+task2/reports/
+task2/screenshots/
+task2/tests_output/
+task3/reports/
+task3/screenshots/
+task3/tests_output/
+
+# Code coverage
+coverage/
+
+# Logs
+*.log
+
+# Operating system files
+.DS_Store

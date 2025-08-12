@@ -1,0 +1,9 @@
+{
+  "email": "test@example.com",
+  "password": "SecurePass123!",
+  "firstName": "John",
+  "lastName": "Doe",
+  "messages": {
+    "securityCheck": "Security verification"
+  }
+}
