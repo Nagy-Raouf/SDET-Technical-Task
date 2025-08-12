@@ -15,7 +15,12 @@ jobs:
           pkg-manager: npm
       - run:
           name: Run All Tasks
-          command: npm run test:all
+          command: |
+            # Create a unique, temporary directory
+            export CHROME_USER_DATA_DIR=$(mktemp -d)
+
+            # Run Nightwatch tests, which will pick up the environment variable
+            npm run test:all
 
 workflows:
   version: 2

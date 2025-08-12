@@ -44,6 +44,13 @@ module.exports = {
 
       desiredCapabilities: {
         browserName: "chrome",
+        "goog:chromeOptions": {
+          args: [
+            // This is the important part
+            `--user-data-dir=${CHROME_USER_DATA_DIR}`,
+            "--no-sandbox", // Always a good idea for CI
+          ],
+        },
       },
 
       webdriver: {

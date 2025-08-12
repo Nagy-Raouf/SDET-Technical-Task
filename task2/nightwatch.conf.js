@@ -50,6 +50,7 @@ module.exports = {
             "--log-level=3", // 0 = verbose, 3 = fatal
             "--silent", // Additional silence
             "--disable-dev-shm-usage",
+            `--user-data-dir=${CHROME_USER_DATA_DIR}`,
             "--no-sandbox",
           ],
           excludeSwitches: ["enable-logging"], // Remove extra logging switch
