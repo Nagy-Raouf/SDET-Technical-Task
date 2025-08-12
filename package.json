@@ -9,6 +9,7 @@
     "test:all": "npm run test:task1 && npm run test:task2 && npm run test:task3"
   },
   "devDependencies": {
+    "chromedriver": "^139.0.0",
     "nightwatch": "^3.4.0"
   }
 }
