@@ -9,7 +9,7 @@ It includes automated tests for the following:
 - **Task 2:** LinkedIn Registration Automation (NightwatchJS)
 - **Task 3:** E-Commerce Website Testing (NightwatchJS)
 - **Task 4:** API Testing
-- **Report:** All the PDFs report requested
+- **Technical Reports:** All the PDFs reports requested
 
 The CI/CD pipeline runs tests for each task sequentially using [CircleCI](https://circleci.com/).
 
