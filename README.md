@@ -9,6 +9,7 @@ It includes automated tests for the following:
 - **Task 2:** LinkedIn Registration Automation (NightwatchJS)
 - **Task 3:** E-Commerce Website Testing (NightwatchJS)
 - **Task 4:** API Testing
+- **Report:** All the PDFs report requested
 
 The CI/CD pipeline runs tests for each task sequentially using [CircleCI](https://circleci.com/).
 
@@ -24,8 +25,9 @@ The CI/CD pipeline runs tests for each task sequentially using [CircleCI](https:
         ├── task3
         ├── task4
         ├── .gitignore
-        ├── .circleci       # CI/CD pipeline configuration
+        ├── .circleci                 # CI/CD pipeline configuration
         ├── package.json
+        ├── Technical Reports         # Contain all the reports documents
         └── README.md
 ]
 ```
@@ -48,10 +50,6 @@ The CI/CD pipeline runs tests for each task sequentially using [CircleCI](https:
     ```
 3.  **Use the following scripts**
 
-    ##### Running All Tasks
-
-        npm run test:all
-
     ##### Task 1
 
         npm run test:task1
@@ -64,6 +62,12 @@ The CI/CD pipeline runs tests for each task sequentially using [CircleCI](https:
 
         npm run test:task3
 
+    ##### Task 4
+
+    - Move: `cd task4`.
+    - Terminal 1: `npm run mock-auth`.
+    - Terminal 2: `npm run test`.
+
 ## 🔄 Continuous Integration (CI/CD)
 
 This repository uses [CircleCI](https://circleci.com/) to run tests automatically on every push to the main branch.
@@ -73,4 +77,3 @@ This repository uses [CircleCI](https://circleci.com/) to run tests automaticall
 1. Run Task 1 tests
 2. Run Task 2 tests
 3. Run Task 3 tests
-4. Run Task 4 API tests
